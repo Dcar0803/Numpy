@@ -1,4 +1,5 @@
 import numpy as np
+from main import generate_normal_array
 
 def test_generate_normal_array():
     result = generate_normal_array((2, 3), mean=0, std_dev=1)

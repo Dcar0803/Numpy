@@ -9,18 +9,18 @@ def test_generate_normal_array():
     print("test_generate_normal_array passed!")
 
     def test_solving_Cramer_rule():
-        coeff_matrix = np.array([[2, -1, 5], [1, 1, -3], [3, 2, 4]])
-    const_matrix = np.array([5, 1, 6])
-    result = solve_ccramers_rule(coeff_matrix, const_matrix)
-    expected = [1, -1, 2]
-    assert np.allclose(result, expected), f"Expected {expected}, got {result}"
+     coeff_matrix = np.array([[2, -1, 5], [1, 1, -3], [3, 2, 4]])
+     const_matrix = np.array([5, 1, 6])
+     result = solve_ccramers_rule(coeff_matrix, const_matrix)
+     expected = [1, -1, 2]
+     assert np.allclose(result, expected), f"Expected {expected}, got {result}"
 
-    # Test with a singular matrix
-    singular_matrix = np.array([[1, 1], [2, 2]])
-    try:
+     # Test with a singular matrix
+     singular_matrix = np.array([[1, 1], [2, 2]])
+     try:
         solve_ccramers_rule(singular_matrix, np.array([3, 6]))
-    except ValueError as e:
+     except ValueError as e:
         assert str(e) == "The coefficient matrix is singular, and the system cannot be solved."
-    else:
+     else:
         assert False, "Expected ValueError for singular matrix"
     print("test_solve_cramers_rule passed!")

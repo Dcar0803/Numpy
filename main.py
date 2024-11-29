@@ -42,7 +42,13 @@ def solve_ccramers_rule(coeff_matrix, const_matrix):
     return solutions
 
 def generate_array_and_find_indices(shape):
-   array = np.random.randint(0, 100, size=shape)
-   even_indices = list(zip(*np.where(array % 2 == 0)))
-   odd_indices = list(zip(*np.where(array % 2 != 0)))
-   return array, even_indices, odd_indices
+   
+    """generate an array with the specified shape of integers and return the indexes of all even numbers & odd numbers as separate lists and the newly generated array
+
+    Returns:
+       tuple: A tuple containing the array, a list of indexes of even numbers, and a list of indexes of odd numbers.
+    """
+    array = np.random.randint(0, 100, size=shape)
+    even_indices = list(zip(*np.where(array % 2 == 0)))
+    odd_indices = list(zip(*np.where(array % 2 != 0)))
+    return array, even_indices, odd_indices

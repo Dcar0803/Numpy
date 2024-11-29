@@ -23,7 +23,7 @@ def solve_ccramers_rule(coeff_matrix, const_matrix):
     Parameters:
         coeff_matrix (np.ndarray): Coefficient matrix of the system.
         const_matrix (np.ndarray): Constants (right-hand side values).
-        
+
     Raises:
         ValueError: when the coefficient matrix is singular 
 

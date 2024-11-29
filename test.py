@@ -40,3 +40,9 @@ def test_generate_array_and_find_indices():
         assert array[idx] % 2 != 0, f"Value at index {idx} is not odd"
 
     print("test_generate_array_and_find_indices passed!")
+
+if __name__ == "__main__":
+    
+    test_generate_normal_array()
+    test_solving_Cramer_rule()
+    test_generate_array_and_find_indices()

@@ -40,3 +40,9 @@ def solve_ccramers_rule(coeff_matrix, const_matrix):
         temp_matrix[:, i] = const_matrix
         solutions.append(np.linalg.det(temp_matrix) / det_coeff)
     return solutions
+
+def generate_array_and_find_indices(shape):
+   array = np.random.randint(0, 100, size=shape)
+   even_indices = list(zip(*np.where(array % 2 == 0)))
+   odd_indices = list(zip(*np.where(array % 2 != 0)))
+   return array, even_indices, odd_indices
